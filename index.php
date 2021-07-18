@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav class="navbar navbar-fixed-top">
-        <div class="navbar-header"><img src="logo.png" id ="chip"></a></div>
+        <div class="navbar-header"><img src="assets/logo.png" id ="chip"></a></div>
     </nav>
 
 <div class="container-fluid bg-1 text-center" style="align-content: center; padding-left: 50px; padding-right: 50px; padding-bottom: 20px;">
@@ -113,7 +113,8 @@
   </div>
 
   <div class="col-sm-5">
-      <h2>Vaccine Sites</h2>
+      <h2>Covid-19 Testing Sites</h2>
+	  <a href=""><img src="assets/map.jpg" style="width:300px; height:300px;"></a>
   </div>
 </div>
 
