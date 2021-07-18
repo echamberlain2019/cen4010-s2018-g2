@@ -35,7 +35,6 @@
   <div class="col-sm-5" style="padding-left: 100px;">
     <h2>Current Pandemic Statistics:</h2>
     <h3>Covid Cases: </h3>
-    <h3>Vaccination Count:</h3>
   </div>
 </div>
 
