@@ -1,0 +1,77 @@
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+      margin-right: auto;
+  
+  }
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: wheat;
+  }
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+    font-weight: bold;
+    width: 20%;
+    height: 20vh;
+    
+    display: flex;
+    align-items: center;
+
+
+  }
+  
+body{
+  background-image: url(img/aquamarine.jpeg);
+  background-size: cover;
+}
+ 
+
+  th{
+    color: black;
+    font-size: large;
+    font-style: oblique;
+  }
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: salmon;
+    position: relative;
+    display: inline-block;
+    width:30rem;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
