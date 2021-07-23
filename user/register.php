@@ -12,7 +12,7 @@
 			$myusername = mysqli_real_escape_string($db,$_POST['username']);
 			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 				
-			$sql = "SELECT * FROM users WHERE username = '$myusername'";
+			$sql = "SELECT * FROM Users WHERE username = '$myusername'";
 			$result = mysqli_query($db,$sql);
 			if($result){
 				$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -30,7 +30,7 @@
 						$password = trim($_POST["password"]);
 					}
 
-					$sql = "INSERT INTO users (Username, Password) VALUES ('$myusername', '$mypassword')";
+					$sql = "INSERT INTO Users (Username, Password) VALUES ('$myusername', '$mypassword')";
 					$result = mysqli_query($db,$sql);
 					if($result){
 						header("location:" . $ROUTES['login'].'?username='.$myusername.'&r=');

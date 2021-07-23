@@ -6,7 +6,7 @@
    
    $USER = $_SESSION[$USER_SESSION_KEY] ?? null;
    if($USER){
-      $ses_sql = mysqli_query($db,"SELECT * FROM users WHERE Username='".$USER['Username']."'");
+      $ses_sql = mysqli_query($db,"SELECT * FROM Users WHERE Username='".$USER['Username']."'");
       $rows = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
       if(!$rows){
          $USER = null;

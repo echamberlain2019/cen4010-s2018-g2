@@ -4,7 +4,7 @@
    $user_profile = false;
    if(!empty($USER)){
         
-        $ses_sql = mysqli_query($db,"SELECT * from userprofiles WHERE username = '".$USER['Username']."' ");
+        $ses_sql = mysqli_query($db,"SELECT * from UserProfiles WHERE username = '".$USER['Username']."' ");
         $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
         if($row){
             $has_profile = true;
@@ -52,7 +52,7 @@
                 }
             }
             
-            $sql = "UPDATE users SET Username = '".$user_profile['Username']."' WHERE Username= '".$USER['Username']."'";
+            $sql = "UPDATE Users SET Username = '".$user_profile['Username']."' WHERE Username= '".$USER['Username']."'";
             $result = mysqli_query($db,$sql);
             if(!$result){
                 $_SESSION[$USER_SESSION_KEY] = $result;
@@ -61,18 +61,18 @@
             }
 
             if($has_profile){
-                $sql = "UPDATE userprofiles SET Username = '".$user_profile['Username']."', Bio = '".($user_profile['Bio'] ?? ' ')."',  ProfilePic = '".($user_profile['ProfilePic'] ?? '')."' WHERE UserProfileID= '".$user_profile['UserProfileID']."'";
+                $sql = "UPDATE UserProfiles SET Username = '".$user_profile['Username']."', Bio = '".($user_profile['Bio'] ?? ' ')."',  ProfilePic = '".($user_profile['ProfilePic'] ?? '')."' WHERE UserProfileID= '".$user_profile['UserProfileID']."'";
                 $result = mysqli_query($db,$sql);
                 
                 if(!$result){
-                    $_SESSION['profile_update_msg'] .= "<br> Issue updating userprofiles table. ". $sql;
+                    $_SESSION['profile_update_msg'] .= "<br> Issue updating UserProfiles table. ". $sql;
                     $_SESSION['profile_update_success'] = false;
                 }
             }else {
-                $sql = "INSERT INTO userprofiles (Username, Bio, ProfilePic) VALUES('".$user_profile['Username']."', '".$user_profile['Bio']."', '".$user_profile['ProfilePic']."')";
+                $sql = "INSERT INTO UserProfiles (Username, Bio, ProfilePic) VALUES('".$user_profile['Username']."', '".$user_profile['Bio']."', '".$user_profile['ProfilePic']."')";
                 $result = mysqli_query($db,$sql);
                 if(!$result){
-                    $_SESSION['profile_update_msg'] .= "<br> Issue inserting into userprofiles table.";
+                    $_SESSION['profile_update_msg'] .= "<br> Issue inserting into UserProfiles table.";
                     $_SESSION['profile_update_success'] = false;
                 }
             }

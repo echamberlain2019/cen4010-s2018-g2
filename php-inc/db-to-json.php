@@ -1,16 +1,16 @@
 <?php
 include('config.php');
 
-$ses_sql = mysqli_query($db,"SELECT * FROM userprofiles");
-$rows = mysqli_fetch_all($ses_sql,MYSQLI_ASSOC);
-if($rows){
-   $DB_TABLES['userprofiless'] = $rows;
-}
+$DB_TABLES = [];
 
-$ses_sql = mysqli_query($db,"SELECT * FROM users");
-$rows = mysqli_fetch_all($ses_sql,MYSQLI_ASSOC);
-if($rows){
-   $DB_TABLES['userss'] = $rows;
+$TABLES_TO_GET = ["UserProfiles", "Users" ];
+
+foreach($TABLES_TO_GET as $table){
+   $ses_sql = mysqli_query($db,"SELECT * FROM ".$table);
+   $rows = mysqli_fetch_assoc($ses_sql);
+   if($rows){
+      $DB_TABLES[$table] = $rows;
+   }
 }
 
 header("Content-type: application/json; charset=utf-8");

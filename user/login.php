@@ -11,7 +11,7 @@
 			$myusername = mysqli_real_escape_string($db,$_POST['username']);
 			$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 			
-			$sql = "SELECT * FROM users WHERE Username = '$myusername' and Password = '$mypassword'";
+			$sql = "SELECT * FROM Users WHERE Username = '$myusername' and Password = '$mypassword'";
 			$result = mysqli_query($db,$sql);
 			if($result){
 				$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
