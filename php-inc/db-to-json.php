@@ -3,7 +3,7 @@ include('config.php');
 
 $DB_TABLES = [];
 
-$TABLES_TO_GET = ["UserProfiles", "Users" ];
+$TABLES_TO_GET = ["UserProfiles", "Users", "Posts", "Comments" ];
 
 foreach($TABLES_TO_GET as $table){
    $ses_sql = mysqli_query($db,"SELECT * FROM ".$table);
