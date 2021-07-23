@@ -18,5 +18,5 @@ if (mysqli_connect_errno()) {
 }
 
 $USER_SESSION_KEY = 'login_user';
-$USER_ID_SESSION_KEY = 'login_user_id';
+$USER_ID_SESSION_KEY = 'user_id';
 $APP_NAME = 'COVID HUB';
