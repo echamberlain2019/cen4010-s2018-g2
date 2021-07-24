@@ -187,10 +187,14 @@ User (<?=$USER['Username']?>) is logged in. <a href="<?=$ROUTES['logout']?>" >Lo
   <diV class="head-logo">
    <h1 class="h-1"></h1>
   </div><?php 
-   if($check->logged_in() === false){
-    include 'login.php';
-   } 
-  ?></div>
+   <?php session_start();?>
+   <?php ## if(!empty($_SESSION['user_id'])): you can use this instead when user_id is created ?>
+   <?php if(!empty($_SESSION['login_user']['Username'])): ?>
+          User (<?=$USER['Username']?>) is logged in. <a href="<?=$ROUTES['logout']?>" >Logout (<?=$_SESSION['login_user']['Username']?>)</a>
+   <?php else: ?>
+       User not logged in.
+  ?>
+</div>
 </div>
 
  <div class="wrapper">  
