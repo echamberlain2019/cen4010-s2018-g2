@@ -86,16 +86,11 @@ i{
     font-family:helvetica,arial,sans-serif;
     
    }
-   
-   
-   body{
-    background-color:#E9EAED;
-   }
+
    /*--------top head start--------*/
    .head{
     height:100px;
     width:100%;
-    background:#83c400;
    }
    .head-in{
     width:850px;
@@ -343,14 +338,6 @@ i{
     border:2px solid rgba(71, 100, 159, 0.55);
    }
    
-   .btn2:hoveR{
-    cursor:pointer;
-   }
-   
-   .btn1:hoveR{
-    cursor:pointer;
-   }
-   
    .post-show{
     width: 490px;
     background: #FFF none repeat scroll 0% 0%;
@@ -468,16 +455,4 @@ i{
    
    .post-footer a{text-decoration:none; font-size:13px; color:#3F66B7;}
    .post-footer a:hover{text-decoration:underline;}
-   
-
-
-
-.Carousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .Carousel .Carousel-inner { transition: 1s ease all; float: left; }
-        .Carousel .Carousel-inner .item { float: left;}
-        .Carousel .Carousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
-    .Carousel .left, .Carousel .right { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .Carousel .left { left:0; }
-    .Carousel .right { right:0; }
-    
-      .Carousel .left.over, .Carousel .right.over { pointer-events: none; background:#ccc; }
+  
