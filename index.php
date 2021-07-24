@@ -1,3 +1,5 @@
+<?php include 'logic.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +21,42 @@
         <div class="navbar-header"><img src="assets/logo.png" id ="chip"></a></div>
     </nav>
 
+
+<?php
+$conn = mysqli_connect("localhost","cen4010_su21_g02@localhost", "5qpmBFABZR") or die("could not connect");
+mysqli_select_db($conn,"cen4010_su21_g02") or die("could not find db");
+$output = '';
+//collect
+if(isset($_POST['search'])) {
+	$searchq = $_POST['search'];
+	$searchq = preg_replace("#[^0-9a-z]#i","",$searchq);
+	
+	$query = mysqli_query($conn, "SELECT * FROM Users WHERE Username LIKE '%$searchq%'");
+	$count = mysqli_num_rows($query);
+	if($count==0){
+		$output = 'There was no search results';
+	}else{
+		while($row = mysqli_fetch_array($query)) {
+			$username = $row['Username'];
+			
+			$message = "Users Found: ";
+			$output .= '<div>'.$message.$username.'</div>';
+		}
+	}
+}
+?>
+
 <div class="container-fluid bg-1 text-center" style="align-content: center; padding-left: 50px; padding-right: 50px; padding-bottom: 20px;">
   <label for="search">
     <i class="fa fa-search" aria-hidden="true"></i>
   </label>
-  <input type="search" id="search" name="search">
+  <form action="search.php" method="post">
+	<input type="text" name="search" placeholder="Search for members..." />
+	<input type="submit" value=">>" />
+ </form>
 </div>
+
+<?php print("$output");?>
 
 <div class="container-fluid bg-1 text-center" style="padding-top: 0px; padding-bottom: 20px;">
   <div class="col-sm-5" style=" display:inline-block">
@@ -34,7 +66,8 @@
 
   <div class="col-sm-5" style="padding-left: 100px;">
     <h2>Current Pandemic Statistics:</h2>
-    <h3>Covid Cases: </h3>
+    <h3>Worldwide Covid Cases: </h3>
+    <?php echo $total_confirmed;?>
   </div>
 </div>
 
