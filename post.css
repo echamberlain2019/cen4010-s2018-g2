@@ -11,6 +11,10 @@
    body{
     background-color:#E9EAED;
    }
+
+   nav img {
+       width: 20px;
+   }
    /*--------top head start--------*/
    .head{
     height:100px;
