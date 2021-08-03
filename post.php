@@ -23,7 +23,10 @@
         $query = $db->query("SELECT  * FROM Posts as p LEFT JOIN UserProfiles AS up ON p.Username = up.Username ");
      
         if($query){
-            $result = $query->fetch_all(MYSQLI_ASSOC);
+            $result = [];
+            while ($row = $query->fetch_assoc()) {
+                $result[] = $row;
+            }
             // var_dump($result);
           return $result;
         }
@@ -35,7 +38,10 @@
         $query = $db->query("SELECT  * FROM Comments WHERE PostID = '".$PostID."' ");
      
         if($query){
-            $result = $query->fetch_all(MYSQLI_ASSOC);
+            $result = [];
+            while ($row = $query->fetch_assoc()) {
+                $result[] = $row;
+            }
             // var_dump($result);
             return $result;
         }
@@ -228,6 +234,7 @@
                 </div>
 
                 <?php $posts  = posts(); ?>
+                <?php if($posts  && count($posts) > 0): ?>
                 <?php foreach($posts as $post): ?>
                 
                     <div class="post-show">
@@ -289,7 +296,7 @@
                     </div>
                     <br>
                 <?php endforeach; ?>
-
+                <?php endif; ?>
             </div>
         </div>
     </div>
