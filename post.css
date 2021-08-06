@@ -1,92 +1,49 @@
-*{
-    margin:0px;
-    padding:0px;
-    width:auto;
-    height:auto;
-    font-family:helvetica,arial,sans-serif;
-    
-   }
-   
-   
-   body{
-    background-color:#E9EAED;
-   }
+nav img {
+    width: 20px;
+ }
 
-   nav img {
-       width: 20px;
-   }
-   /*--------top head start--------*/
-   .head{
-    height:100px;
-    width:100%;
-    background:#83c400;
-   }
-   .head-in{
-    width:850px;
-    margin:0px auto;
-   }
-   .head-logo{
-    width:400px;
-    height:auto;
-    float:left;
-    margin: 40px 0px 0px 0px;
-   }
-   .h-1{
-    color: white;
-     font-size: 44px;
-   }
-   .right{
+.right{
     float:right;
     width:430px;
     height:auto;
     margin: 10px 0px;
     font-size:13px;
-    }
-   .right ul{
+ }
+
+ .right ul{
     list-style:none;
-   }
+ }
    
-   .right ul li{
+ .right ul li{
     margin:5px 5px;
-   }
-   .right ul li input{
+ }
+
+ .right ul li input{
     padding: 4px;
-   }
-   .right-email{
+ }
+
+ .right-email{
     float:left;
-   }
+ }
    
-   .right-pass{
+ .right-pass{
     float:left;
-   }
-   .btn{
-       margin: 25px 1px;
+ }
+
+ .btn{
+    margin: 25px 1px;
     padding:0px;
     border:none;
     background:#8fc400;
     color:white;
     border: 1px solid rgb(40, 77, 39);
     padding: 2px 3px;
+ }
+   
+  .right-btn{
+     line-height: 6;
    }
-   
-   .right-btn{
-   line-height: 6;}
-   
-   .white{
-    color:white;
-   }
-   
-    
-   
-   
-   /*--------header Start--------*/
-   .header{
-    width:851px;
-    height:315px;
-    border:1px solid #ccc;
-    margin:0px auto;
-   }
-   
+      
    
    #login{
     float: right;
@@ -109,30 +66,31 @@
    }
    
    .center{
-    width:600px;
-    margin:0px auto;
+      width: 600px;
+      margin-left: 400px;
+      
    }
-   
+
    .posts{
-    width:600px;
+    width:700px;
     height:auto;
    }
    
    .create-posts{
-    width: 490px;
+    width: 600px;
     background: #FFF none repeat scroll 0% 0%;
     border-radius: 2px;
     border: 1px solid #E1E0E0;
     margin-bottom:10px;
    }
    
-   .c-header{
+   .post-header{
     width:100%;
     height:auto;
-    padding-top:5px;
+    padding-top:30px;
    }
    
-   .c-h-inner{
+   .post-h-inner{
     width:95%;
     height:25px;
     margin:0px 15px;
@@ -141,50 +99,44 @@
     font-weight:bold;
    }
    
-   .c-h-inner ul{
+   .post-h-inner ul{
     list-style:none; 
     margin-top:2px;
    }
    
-   .c-h-inner ul li{
+   .post-h-inner ul li{
     display:inline;
     border-right: 1px solid #E9E3E3;
     padding-right:10px;
    }
-   .c-h-inner  ul li a{
+   .post-h-inner  ul li a{
     color: rgb(59, 89, 152);
     text-decoration: none;
    }
-   .c-h-inner ul li a:hover{
-    text-decoration:underline;
-   }
-   
-   .c-h-inner ul li img{
+    
+   .post-h-inner ul li img{
     margin: -2px 3px;
    }
-   .c-body{
+   .post-body{
     width:100%;
     height:auto;
     border-bottom:1px solid #E5E5E5;
-    overflow: auto;
+    overflow: scroll;
    }
+
    #body-bottom{
     border-top: 1px solid #8fc400;
     margin: 10px;
     display: none;
    }
+
    #body-bottom img{
     margin: 10px;
     height: 95px;
     width: 95px;
    }
-   .iconw-margin{
-    margin: -2px 4px;
-   }
-   .iconp-margin{
-    margin: -3px 1px;
-   }
-   .body-left{
+
+  .body-left{
     width:62px;
     height:auto;
     float:left;
@@ -203,11 +155,7 @@
     width:100%;
     height:100%;
    }
-   
-   .body-right{
-    width: 100%;
-   }
-   
+      
    .text-type{
     width: 400px;
     height: auto;
@@ -219,7 +167,7 @@
     overflow:hidden;
    }
    
-   .c-footer{
+   .post-footer{
     overflow:auto;
    }
    .right-box{
@@ -234,52 +182,37 @@
    .right-box ul li{
     display:inline;
    }
+
    .btn1{
     width: 88px;
     border:1px solid #ccc ;
     background: white none repeat scroll 0% 0%;
     font-weight: bolder;
-    color: rgb(87, 87, 87);
+    color: black;
     border-radius: 2px;
     margin: 10px 0px;
     height: 25px;
     font-size:12px;
    }
-   
-   .btn1:active{
-    bordeR:1px solid rgb(71, 100, 159);
-   }
-   
+      
    
    .btn2{
-    background: rgb(71, 100, 159) none repeat scroll 0% 0%;
+    background: skyblue;
     color: white;
+    border: none;
     font-weight: bolder;
     font-size: 12px;
     margin: 0px 7px;
-    width: 65px;
+    width: 80px;
     height: 25px;
-    border: 1px solid rgb(204, 204, 204);
     border-radius: 4px;
    }
-   
-   .btn2:active{
-    border:2px solid rgba(71, 100, 159, 0.55);
-   }
-   
-   .btn2:hoveR{
-    cursor:pointer;
-   }
-   
-   .btn1:hoveR{
-    cursor:pointer;
-   }
-   
+      
    .post-show{
-    width: 490px;
-    background: #FFF none repeat scroll 0% 0%;
+    width: 600px;
+    height: 100%;
+    background: white;
     border-radius: 2px;
-    border: 1px solid #E1E0E0;
    }
    
    .post-show-inner{
@@ -291,9 +224,7 @@
     width:100%;
     height:60px;
    }
-   .post-header  a:hover{
-    text-decoration:underline;
-   }
+
    .post-header-text{
     margin:8px 0px;
    }
@@ -328,19 +259,16 @@
    }
    
    .post-footer-text small{
-    color: rgb(204, 204, 204);
+    color: grey;
     font-family: sans-serif;
     font-size: 11px;
    }
-   
-   .post-footer-text ul{ list-style:none;}
-   
+    
    .post-left-box{
     width:80%;
     height:auto;
    }
    
-   .post-left-box ul{list-style:none;}
    
    .post-left-box ul li{
     display:block;
@@ -378,13 +306,11 @@
    
    .post-footer{
     width:100%;
-    height:20px;
+    height:50px;
     margin-top:5px;
    }
    
-   .post-footer ul {list-style:none}
    
    .post-footer ul li{display:inline; margin:0px 4px;}
    
-   .post-footer a{text-decoration:none; font-size:13px; color:#3F66B7;}
-   .post-footer a:hover{text-decoration:underline;}
+   .post-footer a{font-size:13px; color:grey;}
